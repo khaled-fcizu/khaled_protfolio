@@ -1,16 +1,25 @@
-# khaled_protfolio
+🌐 Khaled Bahnawy — Flutter Developer Portfolio
 
-A new Flutter project.
+This is a personal portfolio website built with Flutter Web, designed to showcase my work as a Flutter Developer.
+It highlights my skills, projects, and experience in building cross-platform mobile and web applications with clean architecture, strong UI/UX, and modern development practices.
 
-## Getting Started
+The portfolio includes:
 
-This project is a starting point for a Flutter application.
+🎨 A fully responsive and modern design inspired by professional developer portfolios.
 
-A few resources to get you started if this is your first Flutter project:
+🧠 Smooth animations, glassmorphism, and blur effects for an elegant look.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+🧭 Navigation powered by onGenerateRoute for clean and scalable routing.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+📱 Support for multiple screen sizes using flutter_screenutil.
+
+💡 Custom reusable components such as buttons, cards, and sections.
+
+🚀 Built entirely with Flutter Web — no HTML/CSS required.
+
+--------------------------------
+
+- here is a system files design
+- <img width="179" height="236" alt="arch" src="https://github.com/user-attachments/assets/eb119f0e-1e2e-4235-a812-50bfde887bd6" />
+
+

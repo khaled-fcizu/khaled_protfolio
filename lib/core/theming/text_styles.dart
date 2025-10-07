@@ -24,6 +24,11 @@ abstract class TextStyles {
     fontSize: 35.sp,
     fontWeight: FontWeight.bold,
   );
+  static TextStyle font18PrimaryBold = TextStyle(
+    color: AppColors.primary,
+    fontSize: 18.sp,
+    fontWeight: FontWeight.bold,
+  );
   static TextStyle font20WhiteRegular = TextStyle(
     color: Colors.white,
     fontSize: 20.sp,
@@ -43,6 +48,11 @@ abstract class TextStyles {
     color: Colors.white,
     fontSize: 20.sp,
     fontWeight: FontWeightHelper.bold,
+  );
+  static TextStyle font14GrayRegular = TextStyle(
+    color: Colors.grey,
+    fontSize: 14.sp,
+    fontWeight: FontWeightHelper.regular,
   );
 
 }

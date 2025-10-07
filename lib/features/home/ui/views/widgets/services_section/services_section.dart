@@ -3,6 +3,7 @@ import 'package:khaled_protfolio/core/helpers/spacing_helper.dart';
 import 'package:khaled_protfolio/core/theming/colors.dart';
 import 'package:khaled_protfolio/core/theming/text_styles.dart';
 import 'package:khaled_protfolio/features/home/data/models/service_model.dart';
+import 'package:khaled_protfolio/features/home/ui/views/widgets/services_section/service_item.dart';
 
 class ServicesSection extends StatelessWidget {
   const ServicesSection({super.key});
@@ -46,63 +47,3 @@ class ServicesSection extends StatelessWidget {
   }
 }
 
-// عنصر الخدمة (كارت)
-class ServiceItem extends StatefulWidget {
-  const ServiceItem({super.key, required this.serviceModel});
-  final ServiceModel serviceModel;
-
-  @override
-  State<ServiceItem> createState() => _ServiceItemState();
-}
-
-class _ServiceItemState extends State<ServiceItem> {
-  bool _isHovered = false;
-
-  @override
-  Widget build(BuildContext context) {
-    return MouseRegion(
-      onEnter: (_) => setState(() => _isHovered = true),
-      onExit: (_) => setState(() => _isHovered = false),
-      cursor: SystemMouseCursors.click,
-      child: AnimatedContainer(
-        duration: const Duration(milliseconds: 250),
-        curve: Curves.easeOut,
-        padding: const EdgeInsets.all(24),
-        decoration: BoxDecoration(
-          color: _isHovered
-              ? Colors.blueAccent.withOpacity(0.15)
-              : Colors.blueGrey.withOpacity(0.15),
-          borderRadius: BorderRadius.circular(16),
-          border: Border.all(
-            color: _isHovered ? Colors.blueAccent : Colors.transparent,
-            width: 2,
-          ),
-          boxShadow: _isHovered
-              ? [
-                  BoxShadow(
-                    color: Colors.blueAccent.withOpacity(0.4),
-                    blurRadius: 12,
-                    offset: const Offset(0, 4),
-                  ),
-                ]
-              : [],
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Icon(widget.serviceModel.icon, color: AppColors.primary, size: 40),
-            const SizedBox(height: 20),
-            Text(widget.serviceModel.title, style: TextStyles.font20WhiteBold),
-            const SizedBox(height: 10),
-            Text(
-              widget.serviceModel.description,
-              style: TextStyles.font16WhiteRegular.copyWith(
-                color: Colors.grey[300],
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:khaled_protfolio/core/theming/colors.dart';
 import 'package:khaled_protfolio/core/theming/text_styles.dart';
 
@@ -10,7 +9,6 @@ class ContactSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: 1149.h,
       color: AppColors.backgroundSection1,
       padding: const EdgeInsets.symmetric(vertical: 150, horizontal: 100),
       child: Column(

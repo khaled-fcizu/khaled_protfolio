@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:khaled_protfolio/core/helpers/url_lancher_helper.dart';
 import 'package:svg_flutter/svg.dart';
 
 class SocialIcon extends StatefulWidget {
   const SocialIcon({
     super.key,
-    required this.onTap,
+    required this.url,
     required this.image,
   });
 
-  final Function()? onTap;
+    final String url;
   final String image;
 
   @override
@@ -29,7 +30,7 @@ class _SocialIconState extends State<SocialIcon> {
         curve: Curves.easeOut,
         transform: Matrix4.translationValues(0, _isHovered ? -4 : 0, 0),
         child: GestureDetector(
-          onTap: widget.onTap,
+          onTap: ()=> openUrl(widget.url),
           child: Padding(
             padding: const EdgeInsets.all(10),
             child: AnimatedScale(

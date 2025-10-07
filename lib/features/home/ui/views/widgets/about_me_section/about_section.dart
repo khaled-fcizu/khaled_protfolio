@@ -4,8 +4,8 @@ import 'package:khaled_protfolio/features/home/ui/views/widgets/about_me_section
 import 'package:khaled_protfolio/features/home/ui/views/widgets/about_me_section/about_me_texts_and_button.dart';
 
 class AboutSection extends StatelessWidget {
-  const AboutSection({super.key});
-
+  const AboutSection({super.key, required this.scrollController});
+  final ScrollController scrollController ;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -16,7 +16,7 @@ class AboutSection extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.center,
-        children: [AboutMeImage(), AboutMeTextsAndButton()],
+        children: [AboutMeImage(), AboutMeTextsAndButton(scrollController: scrollController)],
       ),
     );
   }

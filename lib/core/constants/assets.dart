@@ -2,9 +2,25 @@
 class Assets {
   Assets._();
   
+  /// Assets for assetsImagesBooklyLogo
+  /// assets/images/bookly_logo.png
+  static const String assetsImagesBooklyLogo = "assets/images/bookly_logo.png";
+
+  /// Assets for assetsImagesDocdocLogo
+  /// assets/images/docdoc_logo.png
+  static const String assetsImagesDocdocLogo = "assets/images/docdoc_logo.png";
+
+  /// Assets for assetsImagesFruitsHubLogo
+  /// assets/images/fruits_hub_logo.png
+  static const String assetsImagesFruitsHubLogo = "assets/images/fruits_hub_logo.png";
+
   /// Assets for assetsImagesMyPhoto
   /// assets/images/my_photo.png
   static const String assetsImagesMyPhoto = "assets/images/my_photo.png";
+
+  /// Assets for assetsImagesNasaLogo
+  /// assets/images/nasa_logo.png
+  static const String assetsImagesNasaLogo = "assets/images/nasa_logo.png";
 
   /// Assets for assetsSvgsAboutBackgroundImage
   /// assets/svgs/about_background_image.svg

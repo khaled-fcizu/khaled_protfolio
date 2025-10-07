@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:khaled_protfolio/core/constants/assets.dart';
+import 'package:khaled_protfolio/core/helpers/doanload_cv_helper.dart';
 import 'package:khaled_protfolio/core/helpers/spacing_helper.dart' show verticalSpace, horizontalSpace;
 import 'package:khaled_protfolio/core/theming/text_styles.dart';
 import 'package:khaled_protfolio/core/widgets/neon_glass_button.dart';
@@ -48,17 +49,17 @@ class TextsAndSocialAndButton extends StatelessWidget {
           // ايقونات التواصل
           Row(
             children: [
-              SocialIcon(image: Assets.assetsSvgsLinkedInIcon, onTap: () {}),
+              SocialIcon(image: Assets.assetsSvgsLinkedInIcon,url: 'https://www.linkedin.com/in/khaled-badr-0325972a1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app', ),
               horizontalSpace(16),
-              SocialIcon(image: Assets.assetsSvgsFacebookIcon, onTap: () {}),
+              SocialIcon(image: Assets.assetsSvgsFacebookIcon, url: 'https://www.facebook.com/share/19osTfx2JM/',),
               horizontalSpace(16),
-              SocialIcon(image: Assets.assetsSvgsInstagramIcon, onTap: () {}),
+              SocialIcon(image: Assets.assetsSvgsInstagramIcon, url: '',),
               horizontalSpace(16),
-              SocialIcon(image: Assets.assetsSvgsXIcon, onTap: () {}),
+              SocialIcon(image: Assets.assetsSvgsXIcon, url: '',),
             ],
           ),
           verticalSpace(50),
-          NeonGlassButton(text: 'Download CV', onPressed: () {}),
+          NeonGlassButton(text: 'Download CV', onPressed: downloadCV),
         ],
       ),
     );

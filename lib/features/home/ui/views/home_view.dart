@@ -4,7 +4,7 @@ import 'package:khaled_protfolio/features/home/ui/views/widgets/about_me_section
 import 'package:khaled_protfolio/features/home/ui/views/widgets/brief_section/brief_overview_section.dart';
 import 'package:khaled_protfolio/features/home/ui/views/widgets/contact_section.dart';
 import 'package:khaled_protfolio/features/home/ui/views/widgets/home_app_bar.dart';
-import 'package:khaled_protfolio/features/home/ui/views/widgets/projects_section.dart';
+import 'package:khaled_protfolio/features/home/ui/views/widgets/project_section/projects_section.dart';
 import 'package:khaled_protfolio/features/home/ui/views/widgets/services_section/services_section.dart';
 
 class HomeView extends StatefulWidget {
@@ -54,7 +54,7 @@ class _HomeViewState extends State<HomeView> {
             const BriefOverviewSection(),
 
             // 🧑‍💼 About Section
-            AboutSection(key: aboutKey),
+            AboutSection(key: aboutKey, scrollController: _scrollController),
 
             // 🧰 Services Section
             ServicesSection(key: servicesKey),

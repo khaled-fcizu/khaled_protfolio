@@ -4,10 +4,8 @@ import 'package:khaled_protfolio/core/theming/text_styles.dart';
 import 'package:khaled_protfolio/core/widgets/neon_glass_button.dart';
 
 class AboutMeTextsAndButton extends StatelessWidget {
-  const AboutMeTextsAndButton({
-    super.key,
-  });
-
+  const AboutMeTextsAndButton({super.key, required this.scrollController});
+  final ScrollController scrollController;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -29,7 +27,18 @@ class AboutMeTextsAndButton extends StatelessWidget {
             style: TextStyles.font20WhiteRegular,
           ),
           verticalSpace(55),
-          NeonGlassButton(text: 'See More', onPressed: () {}),
+          NeonGlassButton(
+            text: 'See More',
+            onPressed: () {
+              final screenHeight = MediaQuery.of(context).size.height;
+
+              scrollController.animateTo(
+                scrollController.offset + screenHeight, // الصفحة التالية
+                duration: const Duration(seconds: 1),
+                curve: Curves.fastOutSlowIn,
+              );
+            },
+          ),
         ],
       ),
     );

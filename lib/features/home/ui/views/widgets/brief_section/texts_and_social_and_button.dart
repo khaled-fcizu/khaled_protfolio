@@ -4,7 +4,7 @@ import 'package:khaled_protfolio/core/constants/assets.dart';
 import 'package:khaled_protfolio/core/helpers/spacing_helper.dart' show verticalSpace, horizontalSpace;
 import 'package:khaled_protfolio/core/theming/text_styles.dart';
 import 'package:khaled_protfolio/core/widgets/neon_glass_button.dart';
-import 'package:khaled_protfolio/features/home/ui/views/widgets/social_icon.dart';
+import 'package:khaled_protfolio/features/home/ui/views/widgets/brief_section/social_icon.dart';
 
 class TextsAndSocialAndButton extends StatelessWidget {
   const TextsAndSocialAndButton({super.key});

@@ -2,17 +2,13 @@
 class Assets {
   Assets._();
   
-  /// Assets for assetsImagesHomeBackground1
-  /// assets/images/home_background1.png
-  static const String assetsImagesHomeBackground1 = "assets/images/home_background1.png";
-
-  /// Assets for assetsImagesHomeBackground2
-  /// assets/images/home_background2.png
-  static const String assetsImagesHomeBackground2 = "assets/images/home_background2.png";
-
   /// Assets for assetsImagesMyPhoto
   /// assets/images/my_photo.png
   static const String assetsImagesMyPhoto = "assets/images/my_photo.png";
+
+  /// Assets for assetsSvgsAboutBackgroundImage
+  /// assets/svgs/about_background_image.svg
+  static const String assetsSvgsAboutBackgroundImage = "assets/svgs/about_background_image.svg";
 
   /// Assets for assetsSvgsFacebookIcon
   /// assets/svgs/facebook_icon.svg

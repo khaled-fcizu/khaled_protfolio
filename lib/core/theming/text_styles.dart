@@ -29,6 +29,16 @@ abstract class TextStyles {
     fontSize: 20.sp,
     fontWeight: FontWeightHelper.regular,
   );
+  static TextStyle font24WhiteRegular = TextStyle(
+    color: Colors.white,
+    fontSize: 24.sp,
+    fontWeight: FontWeightHelper.regular,
+  );
+  static TextStyle font16WhiteRegular = TextStyle(
+    color: Colors.white,
+    fontSize: 16.sp,
+    fontWeight: FontWeightHelper.regular,
+  );
   static TextStyle font20WhiteBold = TextStyle(
     color: Colors.white,
     fontSize: 20.sp,

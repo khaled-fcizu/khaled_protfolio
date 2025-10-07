@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:khaled_protfolio/core/theming/colors.dart';
 import 'package:khaled_protfolio/core/theming/text_styles.dart';
 import 'package:khaled_protfolio/features/home/data/models/project_model.dart';
@@ -23,20 +24,28 @@ class ProjectsSection extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 30),
-          GridView.builder(
-            shrinkWrap: true,
-            physics: const NeverScrollableScrollPhysics(),
-            itemCount: ProjectModel.projects.length,
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2, // صفين
-              crossAxisSpacing: 25,
-              mainAxisSpacing: 25,
-              childAspectRatio: 2, // نسبة العرض للطول
-            ),
-            itemBuilder: (context, index) {
-              return ProjectItem(project: ProjectModel.projects[index]);
-            },
-          ),
+         GridView.builder(
+  shrinkWrap: true,
+  physics: const NeverScrollableScrollPhysics(),
+  itemCount: ProjectModel.projects.length,
+  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+    crossAxisCount: ScreenUtil().screenWidth < 700
+        ? 1
+        : 2, // موبايل = عمود واحد، غير كده = عمودين
+    crossAxisSpacing: 25.w,
+    mainAxisSpacing: 25.h,
+    childAspectRatio: ScreenUtil().screenWidth < 700
+        ? 1.6 // لما الشاشة صغيرة خليه أطول شوية علشان العناصر تبان
+        : 2,   // العرض الطبيعي على الشاشات الكبيرة
+  ),
+  itemBuilder: (context, index) {
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 8.w, vertical: 8.h),
+      child: ProjectItem(project: ProjectModel.projects[index]),
+    );
+  },
+)
+
         ],
       ),
     );

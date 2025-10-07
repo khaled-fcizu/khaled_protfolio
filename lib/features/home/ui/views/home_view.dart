@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:khaled_protfolio/core/helpers/spacing_helper.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:khaled_protfolio/features/home/ui/views/widgets/about_me_section/about_section.dart';
 import 'package:khaled_protfolio/features/home/ui/views/widgets/brief_section/brief_overview_section.dart';
-import 'package:khaled_protfolio/features/home/ui/views/widgets/contact_section.dart';
-import 'package:khaled_protfolio/features/home/ui/views/widgets/home_app_bar.dart';
+import 'package:khaled_protfolio/features/home/ui/views/widgets/contact_section/contact_section.dart';
+import 'package:khaled_protfolio/features/home/ui/views/widgets/brief_section/home_app_bar.dart';
 import 'package:khaled_protfolio/features/home/ui/views/widgets/project_section/projects_section.dart';
 import 'package:khaled_protfolio/features/home/ui/views/widgets/services_section/services_section.dart';
 
@@ -38,7 +38,7 @@ class _HomeViewState extends State<HomeView> {
         controller: _scrollController,
         child: Column(
           children: [
-            verticalSpace(53),
+            SizedBox(height: 53.h),
             HomeAppBar(
               onHomeTap: () => _scrollController.animateTo(
                 0,
@@ -50,20 +50,27 @@ class _HomeViewState extends State<HomeView> {
               onProjectsTap: () => scrollToSection(projectsKey),
               onContactTap: () => scrollToSection(contactKey),
             ),
+            SizedBox(height: 40.h),
+        
             // 🏠 Home Section
             const BriefOverviewSection(),
-
+            SizedBox(height: 80.h),
+        
             // 🧑‍💼 About Section
             AboutSection(key: aboutKey, scrollController: _scrollController),
-
+            SizedBox(height: 100.h),
+        
             // 🧰 Services Section
             ServicesSection(key: servicesKey),
-
+            SizedBox(height: 100.h),
+        
             // 💻 Projects Section
             ProjectsSection(key: projectsKey),
-
+            SizedBox(height: 100.h),
+        
             // 📬 Contact Section
             ContactSection(key: contactKey),
+            SizedBox(height: 80.h),
           ],
         ),
       ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:khaled_protfolio/core/helpers/spacing_helper.dart';
 import 'package:khaled_protfolio/core/theming/colors.dart';
 import 'package:khaled_protfolio/core/theming/text_styles.dart';
@@ -13,7 +14,7 @@ class ServicesSection extends StatelessWidget {
     return Container(
       width: double.infinity,
       color: AppColors.backgroundSection1, // خلفية مختلفة لكل سكشن
-      padding: const EdgeInsets.symmetric(vertical: 150, horizontal: 100),
+      padding:  EdgeInsets.symmetric(vertical: 150.h, horizontal: 100.w),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -28,17 +29,20 @@ class ServicesSection extends StatelessWidget {
 
           // الجريد اللي فيها الخدمات
           GridView.builder(
-            shrinkWrap: true, // مهم علشان الجريد تشتغل جوه Column
-            physics: const NeverScrollableScrollPhysics(), // تمنع سكرول داخلية
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2, // عدد الأعمدة
-              mainAxisSpacing: 30,
-              crossAxisSpacing: 30,
-              childAspectRatio: 2.3, // تناسب العرض مع الارتفاع
+            shrinkWrap: true,
+            physics: const NeverScrollableScrollPhysics(),
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2, // ثابت
+              mainAxisSpacing: 30.h,
+              crossAxisSpacing: 30.w,
+              childAspectRatio: 2.3, // نفس النسبة اللي مصمم بيها
             ),
             itemCount: ServiceModel.services.length,
             itemBuilder: (context, index) {
-              return ServiceItem(serviceModel: ServiceModel.services[index]);
+              return Padding(
+                padding: EdgeInsets.symmetric(horizontal: 8.w, vertical: 8.h),
+                child: ServiceItem(serviceModel: ServiceModel.services[index]),
+              );
             },
           ),
         ],
@@ -46,4 +50,3 @@ class ServicesSection extends StatelessWidget {
     );
   }
 }
-

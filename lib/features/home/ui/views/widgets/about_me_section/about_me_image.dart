@@ -3,23 +3,28 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:khaled_protfolio/core/constants/assets.dart';
 
 class AboutMeImage extends StatelessWidget {
-  const AboutMeImage({super.key});
+  final bool isSmall;
+  const AboutMeImage({super.key, required this.isSmall});
 
   @override
   Widget build(BuildContext context) {
-    return ClipOval(
-      child: Stack(
-        alignment: Alignment.center,
-        children: [
-          CircleAvatar(radius: 200.r, backgroundColor: Colors.black38),
+    final double radius = isSmall ? 120.r : 200.r;
 
-          Image.asset(
-            Assets.assetsImagesMyPhoto,
-            width: 400.r,
-            height: 400.r,
-            fit: BoxFit.cover,
+    return Center(
+      child: Container(
+        width: radius * 2,
+        height: radius * 2,
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          color: Colors.black38,
+          image: DecorationImage(
+            image: AssetImage(Assets.assetsImagesMyPhoto),
+            fit: BoxFit.cover, // تضمن أن الصورة تملى الدائرة بدون خروج
           ),
-        ],
+          boxShadow: [
+            BoxShadow(color: Colors.black12, blurRadius: 15, spreadRadius: 3),
+          ],
+        ),
       ),
     );
   }

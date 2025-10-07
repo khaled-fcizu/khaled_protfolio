@@ -1,16 +1,20 @@
+import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:khaled_protfolio/core/helpers/url_lancher_helper.dart';
 import 'package:svg_flutter/svg.dart';
+import 'package:khaled_protfolio/core/helpers/url_lancher_helper.dart';
 
+/// ==========================
+/// 🔹 Social Icon
+/// ==========================
 class SocialIcon extends StatefulWidget {
+  final String url;
+  final String image;
+
   const SocialIcon({
     super.key,
     required this.url,
     required this.image,
   });
-
-    final String url;
-  final String image;
 
   @override
   State<SocialIcon> createState() => _SocialIconState();
@@ -21,6 +25,13 @@ class _SocialIconState extends State<SocialIcon> {
 
   @override
   Widget build(BuildContext context) {
+    final width = MediaQuery.of(context).size.width;
+    double iconSize = (width < 600)
+        ? 20
+        : (width < 900)
+            ? 25
+            : 30;
+
     return MouseRegion(
       onEnter: (_) => setState(() => _isHovered = true),
       onExit: (_) => setState(() => _isHovered = false),
@@ -30,20 +41,22 @@ class _SocialIconState extends State<SocialIcon> {
         curve: Curves.easeOut,
         transform: Matrix4.translationValues(0, _isHovered ? -4 : 0, 0),
         child: GestureDetector(
-          onTap: ()=> openUrl(widget.url),
+          onTap: () => openUrl(widget.url),
           child: Padding(
-            padding: const EdgeInsets.all(10),
+            padding: const EdgeInsets.all(8.0),
             child: AnimatedScale(
-              scale: _isHovered ? 1.2 : 1.0, // تكبير بسيط وقت الـ hover
+              scale: _isHovered ? 1.2 : 1.0,
               duration: const Duration(milliseconds: 200),
-              curve: Curves.easeOut,
               child: ColorFiltered(
                 colorFilter: _isHovered
                     ? const ColorFilter.mode(
-                        Colors.blueAccent, BlendMode.srcIn) // لون خفيف عند hover
-                    : const ColorFilter.mode(
-                        Colors.white, BlendMode.srcIn),
-                child: SvgPicture.asset(widget.image, width: 30, height: 30),
+                        Colors.blueAccent, BlendMode.srcIn)
+                    : const ColorFilter.mode(Colors.white, BlendMode.srcIn),
+                child: SvgPicture.asset(
+                  widget.image,
+                  width: iconSize,
+                  height: iconSize,
+                ),
               ),
             ),
           ),
@@ -52,3 +65,4 @@ class _SocialIconState extends State<SocialIcon> {
     );
   }
 }
+

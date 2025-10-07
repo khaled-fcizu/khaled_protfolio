@@ -21,6 +21,21 @@ class _HomeAppBarNavButtonState extends State<HomeAppBarNavButton> {
 
   @override
   Widget build(BuildContext context) {
+    final width = ScreenUtil().screenWidth;
+
+    double fontSize = width < 600
+        ? 14
+              .sp // 🔹 أكبر من الأول (12)
+        : width < 1000
+        ? 16.sp
+        : 18.sp;
+
+    double horizontalPadding = width < 600
+        ? 6.w
+        : width < 1000
+        ? 8.w
+        : 10.w;
+
     return MouseRegion(
       onEnter: (_) => setState(() => _isHovered = true),
       onExit: (_) => setState(() => _isHovered = false),
@@ -28,19 +43,29 @@ class _HomeAppBarNavButtonState extends State<HomeAppBarNavButton> {
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 200),
         curve: Curves.easeOut,
-        transform: Matrix4.translationValues(0, _isHovered ? -5 : 0, 0),
-        child: InkWell(
+        transform: Matrix4.identity()
+          ..translate(0, _isHovered ? -3 : 0)
+          ..scale(_isHovered ? 1.08 : 1.0),
+        child: GestureDetector(
           onTap: widget.onTap,
-          hoverColor: Colors.transparent,
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 8.h),
+            padding: EdgeInsets.symmetric(horizontal: horizontalPadding),
             child: AnimatedDefaultTextStyle(
               duration: const Duration(milliseconds: 200),
-              style: _isHovered
-                  ? TextStyles.font20WhiteBold.copyWith(
-                      color: Colors.blueAccent, // اللون وقت الـ hover
-                    )
-                  : TextStyles.font20WhiteBold,
+              curve: Curves.easeOut,
+              style: TextStyles.font20WhiteBold.copyWith(
+                fontSize: fontSize,
+                color: _isHovered ? Colors.blueAccent : Colors.white,
+                letterSpacing: width < 600 ? 0.8 : 1.2,
+                shadows: _isHovered
+                    ? [
+                        Shadow(
+                          color: Colors.blueAccent.withOpacity(0.6),
+                          blurRadius: 10,
+                        ),
+                      ]
+                    : [],
+              ),
               child: Text(widget.title),
             ),
           ),

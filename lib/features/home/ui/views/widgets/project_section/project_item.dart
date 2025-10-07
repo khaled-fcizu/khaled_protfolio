@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:khaled_protfolio/core/helpers/url_lancher_helper.dart';
 import 'package:khaled_protfolio/core/theming/colors.dart';
 import 'package:khaled_protfolio/core/theming/text_styles.dart';
@@ -25,14 +26,13 @@ class _ProjectItemState extends State<ProjectItem> {
         child: AnimatedContainer(
           duration: const Duration(milliseconds: 250),
           curve: Curves.easeInOut,
-      
-          padding: const EdgeInsets.all(20),
+          padding: EdgeInsets.all(20.w),
           decoration: BoxDecoration(
             color: Colors.white.withOpacity(0.05),
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.circular(20.r),
             border: Border.all(
               color: _isHovered ? AppColors.primary : Colors.transparent,
-              width: 1.5,
+              width: 1.5.w,
             ),
           ),
           child: Column(
@@ -40,44 +40,49 @@ class _ProjectItemState extends State<ProjectItem> {
             children: [
               // اللوجو داخل إطار موحد الشكل
               Container(
-                width: 70,
-                height: 70,
+                width: 80.w,
+                height: 80.w,
                 decoration: BoxDecoration(
-                  shape: BoxShape.circle, // دائرة متناسقة
+                  shape: BoxShape.circle,
                   color: Colors.white.withOpacity(0.1),
                   border: Border.all(
                     color: _isHovered ? AppColors.primary : Colors.white24,
-                    width: 1.2,
+                    width: 1.2.w,
                   ),
                 ),
-                padding: const EdgeInsets.all(10),
+                padding: EdgeInsets.all(10.w),
                 child: ClipOval(
-                  child: Image.asset(widget.project.logo, fit: BoxFit.contain),
+                  child: Image.asset(
+                    widget.project.logo,
+                    fit: BoxFit.contain,
+                  ),
                 ),
               ),
-      
-              const SizedBox(height: 15),
-      
+
+              SizedBox(height: 15.h),
+
               // اسم المشروع
               Text(
                 widget.project.name,
                 style: TextStyles.font18PrimaryBold.copyWith(
-                  fontSize: 20,
+                  fontSize: 20.sp,
                   color: Colors.white,
                 ),
                 textAlign: TextAlign.center,
+                overflow: TextOverflow.ellipsis,
               ),
-      
-              const SizedBox(height: 8),
-      
+
+              SizedBox(height: 8.h),
+
               // وصف بسيط للمشروع
               Text(
                 widget.project.description,
                 style: TextStyles.font14GrayRegular.copyWith(
+                  fontSize: 14.sp,
                   color: Colors.white70,
+                  overflow: TextOverflow.ellipsis,
                 ),
                 maxLines: 3,
-                overflow: TextOverflow.ellipsis,
                 textAlign: TextAlign.center,
               ),
             ],

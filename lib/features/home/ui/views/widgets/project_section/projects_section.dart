@@ -13,39 +13,42 @@ class ProjectsSection extends StatelessWidget {
     return Container(
       width: double.infinity,
       color: AppColors.backgroundSection2,
-      padding:  EdgeInsets.symmetric(vertical: 150.h, horizontal: 100.w),
+      padding: EdgeInsets.symmetric(vertical: 150.h, horizontal: 100.w),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
             children: [
-              Text('My ', style: TextStyles.font35WhiteBold),
-              Text('Projects', style: TextStyles.font35PrimaryBold),
+              Text(
+                'My ',
+                style: TextStyles.font35WhiteBold.copyWith(fontSize: 35.sp),
+              ),
+              Text(
+                'Projects',
+                style: TextStyles.font35PrimaryBold.copyWith(fontSize: 35.sp),
+              ),
             ],
           ),
           const SizedBox(height: 30),
-         GridView.builder(
-  shrinkWrap: true,
-  physics: const NeverScrollableScrollPhysics(),
-  itemCount: ProjectModel.projects.length,
-  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-    crossAxisCount: ScreenUtil().screenWidth < 700
-        ? 1
-        : 2, // موبايل = عمود واحد، غير كده = عمودين
-    crossAxisSpacing: 25.w,
-    mainAxisSpacing: 25.h,
-    childAspectRatio: ScreenUtil().screenWidth < 700
-        ? 1.6 // لما الشاشة صغيرة خليه أطول شوية علشان العناصر تبان
-        : 2,   // العرض الطبيعي على الشاشات الكبيرة
-  ),
-  itemBuilder: (context, index) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 8.w, vertical: 8.h),
-      child: ProjectItem(project: ProjectModel.projects[index]),
-    );
-  },
-)
-
+          GridView.builder(
+            shrinkWrap: true,
+            physics: const NeverScrollableScrollPhysics(),
+            itemCount: ProjectModel.projects.length,
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2,
+              crossAxisSpacing: 25.w,
+              mainAxisSpacing: 25.h,
+              childAspectRatio: ScreenUtil().screenWidth < 700
+                  ? 1.8 // لما الشاشة صغيرة خليه أطول شوية علشان العناصر تبان
+                  : 2, // العرض الطبيعي على الشاشات الكبيرة
+            ),
+            itemBuilder: (context, index) {
+              return Padding(
+                padding: EdgeInsets.symmetric(horizontal: 8.w, vertical: 8.h),
+                child: ProjectItem(project: ProjectModel.projects[index]),
+              );
+            },
+          ),
         ],
       ),
     );

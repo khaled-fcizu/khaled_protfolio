@@ -14,15 +14,21 @@ class ServicesSection extends StatelessWidget {
     return Container(
       width: double.infinity,
       color: AppColors.backgroundSection1, // خلفية مختلفة لكل سكشن
-      padding:  EdgeInsets.symmetric(vertical: 150.h, horizontal: 100.w),
+      padding: EdgeInsets.symmetric(vertical: 150.h, horizontal: 100.w),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           // العنوان
           Row(
             children: [
-              Text('My ', style: TextStyles.font35PrimaryBold),
-              Text('Services', style: TextStyles.font35WhiteBold),
+              Text(
+                'My ',
+                style: TextStyles.font35PrimaryBold.copyWith(fontSize: 35.sp),
+              ),
+              Text(
+                'Services',
+                style: TextStyles.font35WhiteBold.copyWith(fontSize: 35.sp),
+              ),
             ],
           ),
           verticalSpace(50),

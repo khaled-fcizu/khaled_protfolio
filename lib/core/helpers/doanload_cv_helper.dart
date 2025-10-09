@@ -1,9 +1,9 @@
 import 'dart:html' as html;
 
 void downloadCV() {
-    final cvUrl = 'assets/files/khaled badr\'s resume.pdf';
+    final cvUrl = 'assets/files/khaled_badr\'s_resume.pdf';
     html.AnchorElement(href: cvUrl)
-      ..setAttribute('download', 'khaled badr\'s resume.pdf')
+      ..setAttribute('download', 'khaled_badr\'s_resume.pdf')
       ..click();
 
 }

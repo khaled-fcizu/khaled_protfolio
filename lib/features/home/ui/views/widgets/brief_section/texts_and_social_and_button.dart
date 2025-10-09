@@ -16,63 +16,76 @@ class TextsAndSocialAndButton extends StatelessWidget {
     final scale = screenWidth < 900
         ? 0.8
         : screenWidth < 600
-            ? 0.65
-            : 1.0;
+        ? 0.65
+        : 1.0;
 
     return Padding(
       padding: EdgeInsets.only(top: 80.h * scale),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text("Hello it’s Me ",
-              style: TextStyles.font32WhiteBold.copyWith(fontSize: 32.sp * scale)),
+          Text(
+            "Hello it’s Me ",
+            style: TextStyles.font32WhiteBold.copyWith(fontSize: 32.sp),
+          ),
           verticalSpace(10 * scale),
-          Text('Khaled Bahnawy',
-              style: TextStyles.font64WhiteBold.copyWith(fontSize: 60.sp * scale)),
+          Text(
+            'Khaled Bahnawy',
+            style: TextStyles.font64WhiteBold.copyWith(fontSize: 60.sp),
+          ),
           verticalSpace(18 * scale),
           Row(
             children: [
-              Text('And I’m a ',
-                  style: TextStyles.font32WhiteBold.copyWith(fontSize: 28.sp * scale)),
-              SizedBox(width: 10.w * scale),
+              Text(
+                'And I’m a ',
+                style: TextStyles.font32WhiteBold.copyWith(fontSize: 28.sp),
+              ),
+              SizedBox(width: 10.w),
               Text(
                 'Flutter Developer </>',
-                style: TextStyles.font35PrimaryBold.copyWith(fontSize: 30.sp * scale),
+                style: TextStyles.font35PrimaryBold.copyWith(fontSize: 30.sp),
               ),
             ],
           ),
           verticalSpace(20 * scale),
           SizedBox(
-            width: 700.w * scale,
+            width: 850.w * scale,
             child: Text(
               'Capable of turning business ideas into scalable, high-quality apps using various architectures. I work effectively in teams, follow best practices, and continuously learn new technologies.',
               style: TextStyles.font20WhiteRegular.copyWith(
-                fontSize: 18.sp * scale,
+                fontSize: 18.sp,
                 color: Colors.grey[400],
               ),
               maxLines: 4,
               overflow: TextOverflow.ellipsis,
-              textAlign: TextAlign.justify,
             ),
           ),
           verticalSpace(30 * scale),
           Row(
             children: [
-              SocialIcon(image: Assets.assetsSvgsLinkedInIcon, url: 'https://www.linkedin.com/in/khaled-badr-0325972a1'),
+              SocialIcon(
+                image: Assets.assetsSvgsLinkedInIcon,
+                url: 'https://www.linkedin.com/in/khaled-badr-0325972a1',
+              ),
               SizedBox(width: 16.w * scale),
-              SocialIcon(image: Assets.assetsSvgsFacebookIcon, url: 'https://www.facebook.com/share/19osTfx2JM/'),
+              SocialIcon(
+                image: Assets.assetsSvgsFacebookIcon,
+                url: 'https://www.facebook.com/share/19osTfx2JM/',
+              ),
               SizedBox(width: 16.w * scale),
-              SocialIcon(image: Assets.assetsSvgsWhatsappIcon, url: 'https://wa.me/201210147948'),
+              SocialIcon(
+                image: Assets.assetsSvgsWhatsappIcon,
+                url: 'https://wa.me/201210147948',
+              ),
               SizedBox(width: 16.w * scale),
-              SocialIcon(image: Assets.assetsSvgsGithubIcon, url: 'https://github.com/khaled-fcizu'),
+              SocialIcon(
+                image: Assets.assetsSvgsGithubIcon,
+                url: 'https://github.com/khaled-fcizu',
+              ),
             ],
           ),
           verticalSpace(40 * scale),
-          Transform.scale(
-            scale: scale,
-            alignment: Alignment.centerLeft,
-            child: NeonGlassButton(text: 'Download CV', onPressed: downloadCV),
-          ),
+          NeonGlassButton(text: 'Download CV', onPressed: downloadCV),
         ],
       ),
     );

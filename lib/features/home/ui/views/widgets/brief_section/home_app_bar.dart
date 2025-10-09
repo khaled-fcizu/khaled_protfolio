@@ -23,23 +23,6 @@ class HomeAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     final width = ScreenUtil().screenWidth;
 
-    // 🔹 Responsive adjustments
-    double horizontalPadding = width < 600
-        ? 25.w // زودنا المسافة الجانبية
-        : width < 1000
-            ? 60.w
-            : 100.w;
-
-    double verticalPadding = width < 600
-        ? 18.h // زودنا ارتفاع البار
-        : 15.h;
-
-    double logoFontSize = width < 600
-        ? 28.sp // كبرنا اللوجو
-        : width < 1000
-            ? 32.sp
-            : 35.sp;
-
     double spacing = width < 600
         ? 10.w // زودنا المسافة بين الأزرار
         : width < 1000
@@ -47,7 +30,7 @@ class HomeAppBar extends StatelessWidget {
             : 20.w;
 
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: horizontalPadding, vertical: verticalPadding),
+      padding: EdgeInsets.symmetric(horizontal: 80.w, vertical: 16.h),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -55,7 +38,7 @@ class HomeAppBar extends StatelessWidget {
           Text(
             'K B',
             style: TextStyles.font35WhiteBold.copyWith(
-              fontSize: logoFontSize,
+              fontSize: 35.sp,
               letterSpacing: 2,
             ),
           ),

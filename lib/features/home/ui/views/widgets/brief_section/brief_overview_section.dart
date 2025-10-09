@@ -20,24 +20,20 @@ class BriefOverviewSection extends StatelessWidget {
         : 1.0;
 
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 80.w * scale),
-      child: Transform.scale(
-        scale: scale,
-        alignment: Alignment.center,
-        child: Column(
-          children: [
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: const [
-                Expanded(child: TextsAndSocialAndButton()),
-                SizedBox(width: 60),
-                HomeImage(),
-              ],
-            ),
-            verticalSpace(100 * scale),
-          ],
-        ),
+      padding: EdgeInsets.symmetric(horizontal: 80.w),
+      child: Column(
+        children: [
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Expanded(child: TextsAndSocialAndButton()),
+              horizontalSpace(60),
+              HomeImage(),
+            ],
+          ),
+          verticalSpace(100 * scale),
+        ],
       ),
     );
   }

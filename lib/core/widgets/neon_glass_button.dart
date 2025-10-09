@@ -28,9 +28,9 @@ class _NeonGlassButtonState extends State<NeonGlassButton> {
     // نحدد إذا كانت الشاشة صغيرة
     final isSmall = MediaQuery.of(context).size.width < 700;
 
-    final double buttonWidth = widget.width ?? (isSmall ? 160.w : 220.w);
-    final double buttonHeight = widget.height ?? (isSmall ? 60.h : 80.h);
-    final double fontSize = isSmall ? 14.sp : 18.sp;
+    final double buttonWidth = widget.width ?? (isSmall ? 190.w : 220.w);
+    final double buttonHeight = widget.height ?? (isSmall ? 50.h : 80.h);
+    final double fontSize = isSmall ? 18.sp : 18.sp;
 
     return MouseRegion(
       onEnter: (_) => setState(() => _isHovering = true),

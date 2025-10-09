@@ -24,11 +24,11 @@ class _HomeAppBarNavButtonState extends State<HomeAppBarNavButton> {
     final width = ScreenUtil().screenWidth;
 
     double fontSize = width < 600
-        ? 14
+        ? 22
               .sp // 🔹 أكبر من الأول (12)
         : width < 1000
-        ? 16.sp
-        : 18.sp;
+        ? 24.sp
+        : 24.sp;
 
     double horizontalPadding = width < 600
         ? 6.w

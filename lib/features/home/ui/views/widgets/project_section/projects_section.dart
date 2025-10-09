@@ -13,7 +13,7 @@ class ProjectsSection extends StatelessWidget {
     return Container(
       width: double.infinity,
       color: AppColors.backgroundSection2,
-      padding: const EdgeInsets.symmetric(vertical: 150, horizontal: 100),
+      padding:  EdgeInsets.symmetric(vertical: 150.h, horizontal: 100.w),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

@@ -7,27 +7,20 @@ class HomeImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final screenWidth = ScreenUtil().screenWidth;
-    final scale = screenWidth < 900
-        ? 0.8
-        : screenWidth < 600
-            ? 0.65
-            : 1.0;
-
     return Padding(
-      padding: EdgeInsets.only(top: 80.h * scale),
+      padding: EdgeInsets.only(top: 80.h),
       child: ClipOval(
         child: Stack(
           alignment: Alignment.center,
           children: [
             CircleAvatar(
-              radius: 250.r * scale,
+              radius: 250.r,
               backgroundColor: Colors.blueGrey.withOpacity(0.1),
             ),
             Image.asset(
               Assets.assetsImagesMyPhoto,
-              width: 500.r * scale,
-              height: 500.r * scale,
+              width: 500.r,
+              height: 500.r,
               fit: BoxFit.cover,
             ),
           ],

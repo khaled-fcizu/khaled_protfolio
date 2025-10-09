@@ -29,9 +29,12 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   cupertino_icons: ^1.0.8
+  dartz: ^0.10.1
   flutter:
     sdk: flutter
+  flutter_bloc: ^9.1.1
   flutter_screenutil: ^5.9.3
+  get_it: ^8.2.0
   http: ^1.5.0
   responsive_builder: ^0.7.1
   svg_flutter: ^0.0.1
@@ -53,6 +56,7 @@ flutter:
   uses-material-design: true
   # To add assets to your application, add an assets section, like this:
   assets:
+    - assets/files/
     - assets/svgs/
     - assets/images/
   # An image asset can refer to one or more resolution-specific "variants", see

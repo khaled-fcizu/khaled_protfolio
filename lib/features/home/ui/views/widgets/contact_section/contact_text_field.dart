@@ -5,13 +5,14 @@ class ContactTextField extends StatelessWidget {
   final String hint;
   final int maxLines;
   final TextInputType keyboard;
+  final String? Function(String?)? validator;
 
   const ContactTextField(
     this.controller,
     this.hint, {
     super.key,
     this.maxLines = 1,
-    this.keyboard = TextInputType.text,
+    this.keyboard = TextInputType.text, this.validator,
   });
   @override
   Widget build(BuildContext context) {
@@ -19,7 +20,7 @@ class ContactTextField extends StatelessWidget {
       controller: controller,
       maxLines: maxLines,
       keyboardType: keyboard,
-      validator: (value) => value!.isEmpty ? "Please enter your $hint" : null,
+      validator: validator ?? (value) => value!.isEmpty ? "Field can't be empty" : null,
       style: const TextStyle(color: Colors.white),
       decoration: InputDecoration(
         hintText: hint,

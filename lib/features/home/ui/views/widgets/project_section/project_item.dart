@@ -52,10 +52,7 @@ class _ProjectItemState extends State<ProjectItem> {
                 ),
                 padding: EdgeInsets.all(10.w),
                 child: ClipOval(
-                  child: Image.asset(
-                    widget.project.logo,
-                    fit: BoxFit.contain,
-                  ),
+                  child: Image.asset(widget.project.logo, fit: BoxFit.contain),
                 ),
               ),
 
@@ -82,7 +79,7 @@ class _ProjectItemState extends State<ProjectItem> {
                   color: Colors.white70,
                   overflow: TextOverflow.ellipsis,
                 ),
-                maxLines: 3,
+                maxLines: 4,
                 textAlign: TextAlign.center,
               ),
             ],

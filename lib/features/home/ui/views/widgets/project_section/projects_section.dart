@@ -27,6 +27,11 @@ class ProjectsSection extends StatelessWidget {
                 'Projects',
                 style: TextStyles.font35PrimaryBold.copyWith(fontSize: 35.sp),
               ),
+              Spacer(),
+              Text(
+                'Hint: Click on a project to see it\'s repository',
+                style: TextStyles.font14GrayRegular.copyWith(fontSize: 14.sp),
+              ),
             ],
           ),
           const SizedBox(height: 30),
@@ -39,8 +44,9 @@ class ProjectsSection extends StatelessWidget {
               crossAxisSpacing: 25.w,
               mainAxisSpacing: 25.h,
               childAspectRatio: ScreenUtil().screenWidth < 700
-                  ? 1.8 // لما الشاشة صغيرة خليه أطول شوية علشان العناصر تبان
-                  : 2, // العرض الطبيعي على الشاشات الكبيرة
+                  ? 2 /
+                        1.5 // لما الشاشة صغيرة خليه أطول شوية علشان العناصر تبان
+                  : 2 / 1.5, // العرض الطبيعي على الشاشات الكبيرة
             ),
             itemBuilder: (context, index) {
               return Padding(

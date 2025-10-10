@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:khaled_protfolio/core/constants/assets.dart';
-import 'package:khaled_protfolio/core/helpers/doanload_cv_helper.dart';
+import 'package:khaled_protfolio/core/helpers/download_cv_helper.dart';
 import 'package:khaled_protfolio/core/helpers/spacing_helper.dart';
 import 'package:khaled_protfolio/core/theming/text_styles.dart';
 import 'package:khaled_protfolio/core/widgets/neon_glass_button.dart';

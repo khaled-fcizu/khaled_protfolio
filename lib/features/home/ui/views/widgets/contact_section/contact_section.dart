@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:khaled_protfolio/core/theming/text_styles.dart';
@@ -15,7 +16,7 @@ class ContactSection extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Text(
-            "Let’s Work Together",
+            "lets_work_together".tr(),
             style: TextStyles.font35WhiteBold,
             textAlign: TextAlign.center,
           ),

@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:khaled_protfolio/core/theming/colors.dart';
@@ -17,7 +18,7 @@ class SendMailButton extends StatelessWidget {
       ),
 
       child: Text(
-        "Send Message",
+       "send_message".tr(),
         style: TextStyles.font16WhiteRegular.copyWith(
           fontWeight: FontWeight.bold,
           fontSize: 18,

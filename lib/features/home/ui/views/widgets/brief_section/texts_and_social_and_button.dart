@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:khaled_protfolio/core/constants/assets.dart';
@@ -25,24 +26,24 @@ class TextsAndSocialAndButton extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            "Hello it’s Me ",
+            "HelloItsMe".tr(),
             style: TextStyles.font32WhiteBold.copyWith(fontSize: 32.sp),
           ),
           verticalSpace(10 * scale),
           Text(
-            'Khaled Bahnawy',
+            "Khaled Bahnawy".tr(),
             style: TextStyles.font64WhiteBold.copyWith(fontSize: 60.sp),
           ),
           verticalSpace(18 * scale),
           Row(
             children: [
               Text(
-                'And I’m a ',
+                "AndImA".tr(),
                 style: TextStyles.font32WhiteBold.copyWith(fontSize: 28.sp),
               ),
               SizedBox(width: 10.w),
               Text(
-                'Flutter Developer </>',
+                "FlutterDeveloperTag".tr(),
                 style: TextStyles.font35PrimaryBold.copyWith(fontSize: 30.sp),
               ),
             ],
@@ -51,7 +52,7 @@ class TextsAndSocialAndButton extends StatelessWidget {
           SizedBox(
             width: 850.w * scale,
             child: Text(
-              'Capable of turning business ideas into scalable, high-quality apps using various architectures. I work effectively in teams, follow best practices, and continuously learn new technologies.',
+"brief_info".tr(),
               style: TextStyles.font20WhiteRegular.copyWith(
                 fontSize: 18.sp,
                 color: Colors.grey[400],
@@ -85,7 +86,7 @@ class TextsAndSocialAndButton extends StatelessWidget {
             ],
           ),
           verticalSpace(40 * scale),
-          NeonGlassButton(text: 'Download CV', onPressed: downloadCV),
+          NeonGlassButton(text: "download_cv".tr(), onPressed: downloadCV),
         ],
       ),
     );

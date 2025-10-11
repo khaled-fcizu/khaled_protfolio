@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:khaled_protfolio/core/theming/colors.dart';
@@ -20,16 +21,16 @@ class ProjectsSection extends StatelessWidget {
           Row(
             children: [
               Text(
-                'My ',
+                "My Projects 1".tr(),
                 style: TextStyles.font35WhiteBold.copyWith(fontSize: 35.sp),
               ),
               Text(
-                'Projects',
+                "My Projects 2".tr(),
                 style: TextStyles.font35PrimaryBold.copyWith(fontSize: 35.sp),
               ),
               Spacer(),
               Text(
-                'Hint: Click on a project to see it\'s repository',
+                "hint".tr(),
                 style: TextStyles.font14GrayRegular.copyWith(fontSize: 14.sp),
               ),
             ],

@@ -1,7 +1,10 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:khaled_protfolio/core/helpers/spacing_helper.dart';
 import 'package:khaled_protfolio/core/theming/text_styles.dart';
 import 'package:khaled_protfolio/features/home/ui/views/widgets/brief_section/home_app_bar_nav_button.dart';
+import 'package:khaled_protfolio/features/home/ui/views/widgets/brief_section/language_switcher.dart';
 
 class HomeAppBar extends StatelessWidget {
   final VoidCallback onHomeTap;
@@ -35,26 +38,32 @@ class HomeAppBar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           // 🔹 Logo
-          Text(
-            'K B',
-            style: TextStyles.font35WhiteBold.copyWith(
-              fontSize: 35.sp,
-              letterSpacing: 2,
-            ),
+          Row(
+            children: [
+              Text(
+                'K B',
+                style: TextStyles.font35WhiteBold.copyWith(
+                  fontSize: 35.sp,
+                  letterSpacing: 2,
+                ),
+              ),
+              horizontalSpace(10),
+              LanguageDropdown(),
+            ],
           ),
 
           // 🔹 Navigation Buttons
           Row(
             children: [
-              HomeAppBarNavButton(title: 'Home', onTap: onHomeTap),
+              HomeAppBarNavButton(title: "Home".tr(), onTap: onHomeTap),
               SizedBox(width: spacing),
-              HomeAppBarNavButton(title: 'About', onTap: onAboutTap),
+              HomeAppBarNavButton(title: "About Me".tr(), onTap: onAboutTap),
               SizedBox(width: spacing),
-              HomeAppBarNavButton(title: 'Service', onTap: onServiceTap),
+              HomeAppBarNavButton(title: "Service".tr(), onTap: onServiceTap),
               SizedBox(width: spacing),
-              HomeAppBarNavButton(title: 'Projects', onTap: onProjectsTap),
+              HomeAppBarNavButton(title: "Projects".tr(), onTap: onProjectsTap),
               SizedBox(width: spacing),
-              HomeAppBarNavButton(title: 'Contact', onTap: onContactTap),
+              HomeAppBarNavButton(title: "Contact".tr(), onTap: onContactTap),
             ],
           ),
         ],

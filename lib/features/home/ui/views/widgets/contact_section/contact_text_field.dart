@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 class ContactTextField extends StatelessWidget {
@@ -12,7 +13,8 @@ class ContactTextField extends StatelessWidget {
     this.hint, {
     super.key,
     this.maxLines = 1,
-    this.keyboard = TextInputType.text, this.validator,
+    this.keyboard = TextInputType.text,
+    this.validator,
   });
   @override
   Widget build(BuildContext context) {
@@ -20,7 +22,8 @@ class ContactTextField extends StatelessWidget {
       controller: controller,
       maxLines: maxLines,
       keyboardType: keyboard,
-      validator: validator ?? (value) => value!.isEmpty ? "Field can't be empty" : null,
+      validator:
+          validator ?? (value) => value!.isEmpty ? "field_empty".tr() : null,
       style: const TextStyle(color: Colors.white),
       decoration: InputDecoration(
         hintText: hint,

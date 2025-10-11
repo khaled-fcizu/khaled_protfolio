@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -24,18 +25,18 @@ class _ContactFormState extends State<ContactForm> {
         children: [
           ContactTextField(
             context.read<ContactCubit>().nameController,
-            "Your Name",
+            "your_name".tr(),
           ),
           verticalSpace(20),
           ContactTextField(
             context.read<ContactCubit>().emailController,
-            "Your Email",
+            "your_email".tr(),
             keyboard: TextInputType.emailAddress,
             validator: (value) {
               if (value == "" || value == null) {
-                return "Field can't be empty";
+                return "field_empty".tr();
               } else if (!AppRegex.isEmailValid(value)) {
-                return "Enter a valid email";
+                return "enter_valid_email".tr();
               }
               return null;
             },
@@ -43,7 +44,7 @@ class _ContactFormState extends State<ContactForm> {
           verticalSpace(20),
           ContactTextField(
             context.read<ContactCubit>().messageController,
-            "Your Message",
+            "your_message".tr(),
             maxLines: 5,
           ),
           verticalSpace(40),

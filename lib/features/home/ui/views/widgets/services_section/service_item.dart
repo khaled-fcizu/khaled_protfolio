@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:khaled_protfolio/core/helpers/spacing_helper.dart';
@@ -34,7 +35,10 @@ class _ServiceItemState extends State<ServiceItem> {
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 250),
         curve: Curves.easeOut,
-        padding: EdgeInsets.symmetric(horizontal: paddingValue, vertical: paddingValue),
+        padding: EdgeInsets.symmetric(
+          horizontal: paddingValue,
+          vertical: paddingValue,
+        ),
         decoration: BoxDecoration(
           color: Colors.blueGrey.withOpacity(0.15),
           borderRadius: BorderRadius.circular(16.r),
@@ -49,7 +53,9 @@ class _ServiceItemState extends State<ServiceItem> {
           child: ConstrainedBox(
             constraints: BoxConstraints(
               minWidth: 250.w,
-              maxWidth: isSmallScreen ? 500.w : 450.w, // أكبر شوية في الشاشات الصغيرة
+              maxWidth: isSmallScreen
+                  ? 500.w
+                  : 450.w, // أكبر شوية في الشاشات الصغيرة
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -61,7 +67,7 @@ class _ServiceItemState extends State<ServiceItem> {
                 ),
                 verticalSpace(20),
                 Text(
-                  widget.serviceModel.title,
+                  widget.serviceModel.title.tr(),
                   textAlign: TextAlign.start,
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
@@ -71,7 +77,7 @@ class _ServiceItemState extends State<ServiceItem> {
                 ),
                 verticalSpace(10),
                 Text(
-                  widget.serviceModel.description,
+                  widget.serviceModel.description.tr(),
                   textAlign: TextAlign.start,
                   maxLines: 3,
                   overflow: TextOverflow.ellipsis,

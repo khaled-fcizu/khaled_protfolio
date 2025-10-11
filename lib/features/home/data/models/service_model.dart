@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class ServiceModel {
   final IconData icon;
@@ -14,27 +13,23 @@ class ServiceModel {
   static List<ServiceModel> services = [
     ServiceModel(
       icon: Icons.phone_iphone_outlined,
-      title: 'Mobile App Development',
-      description:
-          'Building high-quality cross-platform mobile apps using Flutter with clean architecture and state management (Bloc & GetX).',
+      title: "Mobile App Development",
+      description: "mobile_app_development",
     ),
     ServiceModel(
       icon: Icons.cloud_outlined,
-      title: 'Firebase & Supabase Integration',
-      description:
-          'Integrating Firebase & Supabase services like Authentication, Firestore, Storage, and Notifications to build scalable backend-powered apps.',
+      title: "Firebase & Supabase Integration",
+      description: 'firebase_supabase_integration',
     ),
     ServiceModel(
       icon: Icons.design_services_outlined,
-      title: 'UI/UX Design Implementation',
-      description:
-          'Translating modern UI/UX designs into responsive Flutter interfaces with smooth animations and excellent performance.',
+      title: "UI/UX Design Implementation",
+      description: 'ui_ux_design_implementation',
     ),
     ServiceModel(
       icon: Icons.science_outlined,
-      title: 'AI & Machine Learning Apps',
-      description:
-          'Creating smart applications powered by AI and ML models, integrating prediction and automation features with Flutter.',
+      title: "AI & Machine Learning Apps",
+      description: 'ai_machine_learning_apps',
     ),
   ];
 }

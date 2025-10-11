@@ -26,8 +26,8 @@ class _NeonGlassButtonState extends State<NeonGlassButton> {
     final bool isMobile = screenWidth < 600;
 
     // قياسات متناسقة حسب نوع الجهاز
-    final double width = isMobile ? 140.w : 180.w;
-    final double height = isMobile ? 35.h : 65.h;
+    final double width = isMobile ? 150.w : 180.w;
+    final double height = isMobile ? 40.h : 65.h;
     final double fontSize = isMobile ? 15.sp : 15.sp;
 
     return MouseRegion(

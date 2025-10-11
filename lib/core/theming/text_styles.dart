@@ -34,6 +34,7 @@ abstract class TextStyles {
     fontSize: 20.sp,
     fontWeight: FontWeightHelper.regular,
   );
+
   static TextStyle font24WhiteRegular = TextStyle(
     color: Colors.white,
     fontSize: 24.sp,

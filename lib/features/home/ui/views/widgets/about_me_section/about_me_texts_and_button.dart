@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:khaled_protfolio/core/helpers/spacing_helper.dart';
@@ -23,23 +24,23 @@ class AboutMeTextsAndButton extends StatelessWidget {
           Row(
             children: [
               Text(
-                'About ',
+                "About".tr(),
                 style: TextStyles.font35WhiteBold.copyWith(fontSize: 35.sp),
               ),
               Text(
-                'Me',
+                "Me".tr(),
                 style: TextStyles.font35PrimaryBold.copyWith(fontSize: 35.sp),
               ),
             ],
           ),
           verticalSpace(isSmall ? 8.h : 10.h),
           Text(
-            'Flutter Developer',
+            "Flutter Developer".tr(),
             style: TextStyles.font24WhiteRegular.copyWith(fontSize: 24.sp),
           ),
           verticalSpace(isSmall ? 25.h : 33.h),
           Text(
-            'I am a Flutter Developer passionate about creating modern, high-quality mobile and web apps. I focus on clean code, scalability, and performance.',
+            "abuot_info".tr(),
             style: TextStyles.font20WhiteRegular.copyWith(
               fontSize: 20.sp,
               height: 1.5,
@@ -50,7 +51,7 @@ class AboutMeTextsAndButton extends StatelessWidget {
             width: 180.w,
             height: isSmall ? 40.h : 55.h,
             child: NeonGlassButton(
-              text: 'See More',
+              text: "See More".tr(),
               onPressed: () {
                 final screenHeight = MediaQuery.of(context).size.height;
                 scrollController.animateTo(

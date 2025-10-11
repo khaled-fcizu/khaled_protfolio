@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:khaled_protfolio/core/helpers/url_lancher_helper.dart';
@@ -60,7 +61,7 @@ class _ProjectItemState extends State<ProjectItem> {
 
               // اسم المشروع
               Text(
-                widget.project.name,
+                widget.project.name.tr(),
                 style: TextStyles.font18PrimaryBold.copyWith(
                   fontSize: 20.sp,
                   color: Colors.white,
@@ -73,7 +74,7 @@ class _ProjectItemState extends State<ProjectItem> {
 
               // وصف بسيط للمشروع
               Text(
-                widget.project.description,
+                widget.project.description.tr(),
                 style: TextStyles.font14GrayRegular.copyWith(
                   fontSize: 14.sp,
                   color: Colors.white70,

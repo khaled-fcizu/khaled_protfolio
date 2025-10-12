@@ -52,7 +52,7 @@ class TextsAndSocialAndButton extends StatelessWidget {
           SizedBox(
             width: 850.w * scale,
             child: Text(
-"brief_info".tr(),
+              "brief_info".tr(),
               style: TextStyles.font20WhiteRegular.copyWith(
                 fontSize: 18.sp,
                 color: Colors.grey[400],
@@ -63,25 +63,32 @@ class TextsAndSocialAndButton extends StatelessWidget {
           ),
           verticalSpace(30 * scale),
           Row(
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               SocialIcon(
                 image: Assets.assetsSvgsLinkedInIcon,
                 url: 'https://www.linkedin.com/in/khaled-badr-0325972a1',
               ),
-              SizedBox(width: 16.w * scale),
+              SizedBox(width: 12.w * scale),
               SocialIcon(
                 image: Assets.assetsSvgsFacebookIcon,
                 url: 'https://www.facebook.com/share/19osTfx2JM/',
               ),
-              SizedBox(width: 16.w * scale),
+              SizedBox(width: 12.w * scale),
               SocialIcon(
                 image: Assets.assetsSvgsWhatsappIcon,
                 url: 'https://wa.me/201210147948',
               ),
-              SizedBox(width: 16.w * scale),
+              SizedBox(width: 12.w * scale),
               SocialIcon(
                 image: Assets.assetsSvgsGithubIcon,
                 url: 'https://github.com/khaled-fcizu',
+              ),
+              SizedBox(width: 12.w * scale),
+              SocialIcon(
+                image: Assets.assetsSvgsGmailIcon,
+                url:
+                    'https://mail.google.com/mail/u/0/?fs=1&to=khaledbadr.dev@gmail.com&tf=cm',
               ),
             ],
           ),

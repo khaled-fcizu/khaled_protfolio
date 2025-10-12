@@ -38,6 +38,10 @@ class Assets {
   /// assets/svgs/github_icon.svg
   static const String assetsSvgsGithubIcon = "assets/svgs/github_icon.svg";
 
+  /// Assets for assetsSvgsGmailIcon
+  /// assets/svgs/gmail_icon.svg
+  static const String assetsSvgsGmailIcon = "assets/svgs/gmail_icon.svg";
+
   /// Assets for assetsSvgsInstagramIcon
   /// assets/svgs/instagram_icon.svg
   static const String assetsSvgsInstagramIcon = "assets/svgs/instagram_icon.svg";

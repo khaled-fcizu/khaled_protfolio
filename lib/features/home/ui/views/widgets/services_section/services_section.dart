@@ -46,10 +46,7 @@ class ServicesSection extends StatelessWidget {
             ),
             itemCount: ServiceModel.services.length,
             itemBuilder: (context, index) {
-              return Padding(
-                padding: EdgeInsets.symmetric(horizontal: 8.w, vertical: 8.h),
-                child: ServiceItem(serviceModel: ServiceModel.services[index]),
-              );
+              return ServiceItem(serviceModel: ServiceModel.services[index]);
             },
           ),
         ],

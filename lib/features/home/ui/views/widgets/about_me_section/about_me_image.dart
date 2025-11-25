@@ -14,7 +14,7 @@ class AboutMeImage extends StatelessWidget {
         decoration: BoxDecoration(
           shape: BoxShape.circle,
           color: Colors.black38,
-          image: DecorationImage(image: AssetImage(Assets.assetsImagesMyPhoto)),
+          image: DecorationImage(image: AssetImage(Assets.assetsImagesMe1)),
           boxShadow: [
             BoxShadow(color: Colors.black12, blurRadius: 15, spreadRadius: 3),
           ],

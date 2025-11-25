@@ -34,7 +34,6 @@ class _ServiceItemState extends State<ServiceItem> {
       cursor: SystemMouseCursors.click,
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 250),
-        curve: Curves.easeOut,
         padding: EdgeInsets.symmetric(
           horizontal: paddingValue,
           vertical: paddingValue,
@@ -44,7 +43,6 @@ class _ServiceItemState extends State<ServiceItem> {
           borderRadius: BorderRadius.circular(16.r),
           border: Border.all(
             color: _isHovered ? Colors.blueAccent : Colors.transparent,
-            width: 2.w,
           ),
         ),
         child: FittedBox(

@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:khaled_protfolio/core/helpers/spacing_helper.dart';
 import 'package:khaled_protfolio/core/theming/colors.dart';
 import 'package:khaled_protfolio/core/theming/text_styles.dart';
 import 'package:khaled_protfolio/features/home/data/models/project_model.dart';
@@ -35,25 +36,19 @@ class ProjectsSection extends StatelessWidget {
               ),
             ],
           ),
-          const SizedBox(height: 30),
+          verticalSpace(50),
           GridView.builder(
             shrinkWrap: true,
             physics: const NeverScrollableScrollPhysics(),
             itemCount: ProjectModel.projects.length,
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
-              crossAxisSpacing: 25.w,
-              mainAxisSpacing: 25.h,
-              childAspectRatio: ScreenUtil().screenWidth < 700
-                  ? 2 /
-                        1.5 // لما الشاشة صغيرة خليه أطول شوية علشان العناصر تبان
-                  : 2 / 1.5, // العرض الطبيعي على الشاشات الكبيرة
+              crossAxisSpacing: 30.w,
+              mainAxisSpacing: 30.h,
+              childAspectRatio: 2 / 1.5,
             ),
             itemBuilder: (context, index) {
-              return Padding(
-                padding: EdgeInsets.symmetric(horizontal: 8.w, vertical: 8.h),
-                child: ProjectItem(project: ProjectModel.projects[index]),
-              );
+              return ProjectItem(project: ProjectModel.projects[index]);
             },
           ),
         ],

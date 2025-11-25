@@ -18,7 +18,7 @@ class HomeImage extends StatelessWidget {
               backgroundColor: Colors.blueGrey.withOpacity(0.1),
             ),
             Image.asset(
-              Assets.assetsImagesMyPhoto,
+              Assets.assetsImagesMe2,
               width: 500.r,
               height: 500.r,
               fit: BoxFit.cover,

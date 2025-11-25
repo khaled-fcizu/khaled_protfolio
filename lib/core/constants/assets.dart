@@ -18,9 +18,13 @@ class Assets {
   /// assets/images/github.png
   static const String assetsImagesGithub = "assets/images/github.png";
 
-  /// Assets for assetsImagesMyPhoto
-  /// assets/images/my_photo.png
-  static const String assetsImagesMyPhoto = "assets/images/my_photo.png";
+  /// Assets for assetsImagesMe1
+  /// assets/images/me1.png
+  static const String assetsImagesMe1 = "assets/images/me1.png";
+
+  /// Assets for assetsImagesMe2
+  /// assets/images/me2.png
+  static const String assetsImagesMe2 = "assets/images/me2.png";
 
   /// Assets for assetsImagesNasaLogo
   /// assets/images/nasa_logo.png

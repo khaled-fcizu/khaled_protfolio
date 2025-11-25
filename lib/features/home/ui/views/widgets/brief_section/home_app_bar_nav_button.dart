@@ -56,7 +56,7 @@ class _HomeAppBarNavButtonState extends State<HomeAppBarNavButton> {
               style: TextStyles.font20WhiteBold.copyWith(
                 fontSize: fontSize,
                 color: _isHovered ? Colors.blueAccent : Colors.white,
-                letterSpacing: width < 600 ? 0.8 : 1.2,
+                letterSpacing: .8,
                 shadows: _isHovered
                     ? [
                         Shadow(

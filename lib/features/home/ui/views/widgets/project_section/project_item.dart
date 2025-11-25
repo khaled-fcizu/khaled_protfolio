@@ -26,14 +26,14 @@ class _ProjectItemState extends State<ProjectItem> {
         onExit: (_) => setState(() => _isHovered = false),
         child: AnimatedContainer(
           duration: const Duration(milliseconds: 250),
-          curve: Curves.easeInOut,
+          //curve: Curves.easeInOut,
           padding: EdgeInsets.all(20.w),
           decoration: BoxDecoration(
             color: Colors.white.withOpacity(0.05),
             borderRadius: BorderRadius.circular(20.r),
             border: Border.all(
               color: _isHovered ? AppColors.primary : Colors.transparent,
-              width: 1.5.w,
+              width: 2.w,
             ),
           ),
           child: Column(
@@ -57,7 +57,7 @@ class _ProjectItemState extends State<ProjectItem> {
                 ),
               ),
 
-              SizedBox(height: 15.h),
+              SizedBox(height: 30.h),
 
               // اسم المشروع
               Text(
@@ -70,7 +70,7 @@ class _ProjectItemState extends State<ProjectItem> {
                 overflow: TextOverflow.ellipsis,
               ),
 
-              SizedBox(height: 8.h),
+              SizedBox(height: 15.h),
 
               // وصف بسيط للمشروع
               Text(
